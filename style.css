@@ -614,3 +614,164 @@ footer{
       opacity:0;
     }
   }
+
+
+  .dark-toggle {
+  background: transparent;
+  border: 2px solid #333;
+  border-radius: 50px;
+  width: auto;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s;
+  color: #333;
+}
+
+.dark-toggle:hover {
+  background: rgba(0,0,0,0.08);
+  transform: none;
+}
+
+body.dark .dark-toggle {
+  border-color: #aaa;
+  color: #eee;
+}
+
+body.dark .dark-toggle:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* --- DARK OVERRIDES --- */
+
+body.dark .hero {
+  background: linear-gradient(135deg, #1c2b48, #6e9fe0) !important;
+}
+
+body.dark .navbar {
+  background: rgba(25, 34, 71, 0.95) !important;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+body.dark .logo { color: #a8c4ff; }
+
+body.dark .nav-links a { color: #c8d8ff; }
+body.dark .nav-links a:hover { color: #ffffff; }
+
+body.dark .hero-text h1,
+body.dark .greeting { color: #e8eaf6; }
+
+body.dark .badge {
+  background: linear-gradient(135deg, #4962cd, #4a6fa5);
+  color: #a8c4ff;
+  box-shadow: 0 5px 15px rgba(40, 80, 180, 0.4);
+}
+
+body.dark .description { color: #b0bcd8 !important; }
+
+body.dark .btn-contact {
+  background: #4a6fa5;
+  color: #ffffff;
+}
+
+body.dark .stats-card {
+  background: #0c1c42;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  color: #c8d8ff;
+}
+
+body.dark .stat-item p { color: #8899bb; }
+body.dark .stat-item strong { color: #a8c4ff; }
+
+body.dark .about {
+  background: hwb(213 66% 25%) !important;
+}
+
+body.dark .about-text h2,
+body.dark .about-text p { color: #1a2647; }
+
+body.dark .arch-frame { background: #2a3b61; }
+
+body.dark .experience-card {
+  background: #1a2a4e;
+  color: #c8d8ff;
+}
+
+body.dark .experience-card p { color: #fdfdfd; }
+
+body.dark .experience-card button {
+  background: #e8ecf3;
+  color: #000000;
+}
+
+body.dark .skills-section {
+  background: rgb(19, 42, 69) !important;
+}
+
+body.dark .skill-card {
+  background: #3b5181;
+}
+
+body.dark .skill-card p { color: #ffffff; }
+
+body.dark .projects { background: hwb(213 66% 25%); }
+
+body.dark .judul h1,
+body.dark .judul p { color: #0c1735; }
+
+body.dark .project-card {
+  background:hwb(212 10% 65%);
+  color: #fafbff;
+  box-shadow: 0 6px 20px rgba(34, 174, 255, 0.4);
+}
+
+body.dark .project-card h3,
+body.dark .project-card p { color: #f5f5fc; }
+
+body.dark .project-card button {
+  background: #7291b9;
+  color: #ffffff;
+}
+
+body.dark .contact-section {
+  background: #02122f !important;
+}
+
+body.dark .social-box i {
+  background: #6b89c0;
+  color: #0d0f12;
+}
+
+body.dark .divider { background: rgb(253, 253, 253); }
+
+body.dark input,
+body.dark textarea {
+  background: #20335f;
+  color: #131e5c;
+  border: 1px solid #2a3a6e;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder { color: #eaeef5; }
+
+body.dark .right button[type="submit"] {
+  background: #0c2056b2;
+  color: #ffffff;
+}
+
+body.dark footer {
+  background: #080f1e !important;
+  color: #8899bb;
+}
+
+body.dark .star { color: #bfc4cd !important; }
+
+/* Smooth transition */
+body, .hero, .about, .projects, .project-card,
+.contact-section, footer, .navbar, .stats-card,
+.experience-card, .skill-card, input, textarea {
+  transition: background 0.4s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
