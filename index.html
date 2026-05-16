@@ -370,5 +370,40 @@
 
   });
   </script>
+
+
+<script>
+    (function () {
+  // 1. tombol toggle ke dalam navbar
+  const navbar = document.querySelector(".navbar");
+
+  if (navbar) {
+    const btn = document.createElement("button");
+    btn.className = "dark-toggle";
+    btn.setAttribute("aria-label", "Toggle dark mode");
+    btn.innerHTML = `<span class="toggle-icon">🌙</span> <span class="toggle-label">Dark</span>`;
+    navbar.appendChild(btn);
+
+    // 2. Restore preferensi dari localStorage
+    const saved = localStorage.getItem("darkMode");
+    if (saved === "on") {
+      document.body.classList.add("dark");
+      btn.innerHTML = `<span class="toggle-icon">☀️</span> <span class="toggle-label">Light</span>`;
+    }
+
+    // 3. Klik toggle
+    btn.addEventListener("click", () => {
+      const isDark = document.body.classList.toggle("dark");
+      if (isDark) {
+        btn.innerHTML = `<span class="toggle-icon">☀️</span> <span class="toggle-label">Light</span>`;
+        localStorage.setItem("darkMode", "on");
+      } else {
+        btn.innerHTML = `<span class="toggle-icon">🌙</span> <span class="toggle-label">Dark</span>`;
+        localStorage.setItem("darkMode", "off");
+      }
+    });
+  }
+})();
+</script>
 </body>
 </html>
